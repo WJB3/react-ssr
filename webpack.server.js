@@ -3,7 +3,7 @@ const nodeExternals=require("webpack-node-externals");
 
 module.exports={
     target:"node",
-    entry:"./src/index.js",
+    entry:"./src/server/index.js",
     mode:"development",
     output:{
         filename:"bundle.js",
@@ -14,10 +14,7 @@ module.exports={
         rules:[{
             test:/\.js?$/,
             loader:"babel-loader",
-            exclude:/node_modules/,
-            options:{
-               
-            }
+            exclude:/node_modules/
         }]
     }
 }
